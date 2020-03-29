@@ -1,9 +1,14 @@
 [run]
+# app폴더안의 내용을 검사
 source =
     app
 
-# 테스트에서 제외하고 싶은 파일들을 지정
+# 지정한 경로는 리포트에서 제외
 omit =
     app/manage.py
-    app/config.asgi.py
-    app/config.wsgi.py
+    app/config/asgi.py
+    app/config/wsgi.py
+
+[report]
+exclude_lines =
+    def __str__
