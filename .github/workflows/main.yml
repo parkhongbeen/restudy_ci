@@ -30,6 +30,9 @@ jobs:
     - name: Install Python packages
       run: ~/.poetry/bin/poetry install
     
+    - name: poetry run pip list
+      run: poetry run pip list
+    
     - name: pytest-cov
       run: ~/.poetry/bin/poetry run pytest --cov app
       
