@@ -1,4 +1,4 @@
-name: Restudy_ci
+name: restudy_ci
 
 on:
   push:
