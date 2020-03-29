@@ -27,7 +27,7 @@ jobs:
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
     - name: pip list@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-      run: pip list
+      run: pip install django3.0
 
     - name: Poetry export requirements
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
