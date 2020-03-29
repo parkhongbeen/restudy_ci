@@ -1,5 +1,7 @@
 name: Restudy_ci
 
+name: CI
+
 on:
   push:
     branches: [ master ]
