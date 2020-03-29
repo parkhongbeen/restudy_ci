@@ -22,10 +22,8 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-        
-    - name: pip list@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-      run: pip install "django<3.0"
-    
+
+
     - name: Install Poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
