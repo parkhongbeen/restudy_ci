@@ -6,6 +6,8 @@ authors = ["parkhongbeen <pack122@naver.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+codecov = "^2.0.22"
+pytest-cov = "^2.8.1"
 
 [tool.poetry.dev-dependencies]
 

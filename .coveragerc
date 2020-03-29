@@ -1,0 +1,9 @@
+[run]
+source =
+    app
+
+# 테스트에서 제외하고 싶은 파일들을 지정
+omit =
+    app/manage.py
+    app/config.asgi.py
+    app/config.wsgi.py
