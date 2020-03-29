@@ -26,12 +26,11 @@ jobs:
     - name: Install Poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
+    - name: ci
+      run: poetry run pip list
+
     - name: Poetry export requirements
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
-
-    - name: ci
-      run: poetry pip list
-      
       
     - name: Install Python packages
       run: ~/.poetry/bin/poetry install
