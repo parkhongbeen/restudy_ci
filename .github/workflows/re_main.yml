@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  CODECOV_TOKEN: ${{ secrets.CODEDOV_TOKEN }}
+  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 jobs:
   build:
@@ -32,8 +32,8 @@ jobs:
     - name: Install Python packages
       run: ~/.poetry/bin/poetry install
     
-    - name: pytest-codecov
+    - name: pytest-cov
       run: ~/.poetry/bin/poetry run pytest --cov app
-      
+    
     - name: codecov
       run: ~/.poetry/bin/poetry run codecov
