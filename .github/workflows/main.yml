@@ -29,9 +29,6 @@ jobs:
 
     - name: Poetry export requirements
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
-    
-    - name: solve for error
-      run: poetry install
       
     - name: Install Python packages
       run: ~/.poetry/bin/poetry install
