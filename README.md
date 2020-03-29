@@ -66,6 +66,10 @@ pytest를 사용해서 codecov.io에 업로드 할 리포트를 만들어주는 
 
 ```
 $ poetry add codecov pytest-cov
+
+# pytest, pytest-django, coverage를 사용해서 codecov에 리포트 생성
 $ pytest --cov app
+
+# codecov에 생선된 리포트를 전송
 $ CODECOV_TOKEN=<codecov.io Token> codecov
 ```
