@@ -2,7 +2,7 @@
 
 ----
 
-[![codecov](https://codecov.io/gh/parkhongbeen/restudy_ci/branch/master/graph/badge.svg)](https://codecov.io/gh/parkhongbeen/restudy_ci)
+[![codecov](https://codecov.io/gh/parkhongbeen/restudy_ci/branch/master/graph/badge.svg)](https://codecov.io/gh/parkhongbeen/restudy_ci)![CI](https://github.com/parkhongbeen/ci/workflows/CI/badge.svg)
 
 ### Django기본 테스트
 
