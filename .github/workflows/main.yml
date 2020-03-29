@@ -34,7 +34,7 @@ jobs:
       run: ~/.poetry/bin/poetry install
       
     - name: listlistlistlistlist
-      run: pip list
+      run: poetry install
     
     - name: pytest-cov
       run: ~/.poetry/bin/poetry run pytest --cov app
