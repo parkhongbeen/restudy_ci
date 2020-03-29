@@ -30,7 +30,7 @@ jobs:
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
 
     - name: solve error
-      run: poetry run pip list
+      run: poetry install -e
       
       
     - name: Install Python packages
