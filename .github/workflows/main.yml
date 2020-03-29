@@ -31,7 +31,7 @@ jobs:
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
     
     - name: solve for error
-      run: poetry add django
+      run: poetry install
       
     - name: Install Python packages
       run: ~/.poetry/bin/poetry install
