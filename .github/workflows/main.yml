@@ -1,4 +1,4 @@
-name: restudy_CI
+name: Restudy_CI
 
 on:
   push:
@@ -6,32 +6,34 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.7, 3.8]
-    
 
     steps:
     - uses: actions/checkout@v2
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
-        python-version: ${{ matrix.python-version }} 
-
-    - name: Poerty install
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install Poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
     - name: Poetry export requirements
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
-     
+
     - name: Install Python packages
       run: ~/.poetry/bin/poetry install
-
+    
     - name: pytest-cov
       run: ~/.poetry/bin/poetry run pytest --cov app
-      
+    
     - name: codecov
       run: ~/.poetry/bin/poetry run codecov
